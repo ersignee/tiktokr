@@ -1,0 +1,6 @@
+selenium
+psutil
+pillow
+alive-progress
+chromedriver-autoinstaller
+chromedriver_binary
