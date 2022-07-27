@@ -16,7 +16,7 @@ Every time you run the script you have to complete a recaptcha.
 The script will open the default image viewer and show you a code that you will need to imput in the console when asked.
 
 ## Proof
-![Preview](https://imgur.com/a/yvtJmdN)
+![Preview](https://i.imgur.com/WOOiaYc.png)
 
 ## Special thanks
 1. Thanks to https://zefoy.com/ for providing an amazing free service.
