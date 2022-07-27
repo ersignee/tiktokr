@@ -23,4 +23,5 @@ The script will open the default image viewer and show you a code that you will 
 The next release will have the following new features:
 - Working followers tab
 - Working Likes tab
+
 Note that the followers and likes tabs in the menu already exist in the current release but aren't fully implemented yet.
