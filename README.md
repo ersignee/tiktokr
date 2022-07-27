@@ -3,7 +3,7 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 
 ## How can I install and use this?
 1. Git-clone this repo & change directory
-   <pre>git clone https://github.com/ersignee/tiktokr</pre>
+   <pre>git clone https://github.com/ersignee/TikTokr.git</pre>
    <pre>cd TikTokr</pre>
 2. Install modules using pip:
    <pre>pip install -r requirements.txt</pre>
