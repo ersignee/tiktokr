@@ -13,7 +13,7 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
    <pre>python tiktokr.py</pre>
 ## Note
 Every time you run the script you have to complete a recaptcha.
-The script will open the default image viewer and show you a code that you will need to imput in the console when asked.
+The script will open the default image viewer and show you a code that you will need to input in the console when asked.
 
 ## Special thanks
 1. Thanks to https://zefoy.com/ for providing an amazing free service.
