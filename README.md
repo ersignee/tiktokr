@@ -5,10 +5,12 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 1. Go to the [Releases](https://github.com/ersignee/TikTokr/releases) Tab and download the latest release .zip file
 2. Extract the file and open the script folder
 3. Press SHIFT+RIGHT-CLICK in the folder and open CMD(it should open it by default in the script folder)
+4. Install the requirements:
 
-Run the script using:
-<pre>python tiktokr.py</pre>
+   <pre>pip install -r requirements.txt</pre>
+5. Run the script using:
 
+   <pre>python tiktokr.py</pre>
 ## Note
 Every time you run the script you have to complete a recaptcha.
 The script will open the default image viewer and show you a code that you will need to imput in the console when asked.
