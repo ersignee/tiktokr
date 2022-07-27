@@ -2,14 +2,12 @@
 Tiktokr is a TikTok tool to get views, likes, follows and shares and increment the visibility of your profile.
 
 ## How can I install and use this?
-1. Git-clone this repo & change directory
-   <pre>git clone https://github.com/ersignee/TikTokr.git</pre>
-   <pre>cd TikTokr</pre>
-2. Install modules using pip:
-   <pre>pip install -r requirements.txt</pre>
-3. Make sure you have Google Chrome installed
-4. Run the .py file!
-   <pre>python tiktokr.py</pre>
+1. Go to the [Releases](https://github.com/ersignee/TikTokr/releases) Tab and download the latest release .zip file
+2. Extract the file and open the script folder
+3. Press SHIFT+RIGHT-CLICK in the folder and open CMD(it should open it by default in the script folder)
+
+Run the script using:
+<pre>python tiktokr.py</pre>
 
 ## Note
 Every time you run the script you have to complete a recaptcha.
