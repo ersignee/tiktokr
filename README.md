@@ -1,27 +1,45 @@
-# TikTokr
+# ☄️・ TikTokr
+
 Tiktokr is a TikTok tool to get views, likes, follows and shares and increment the visibility of your profile.
 
-## How can I install and use this?
-1. Go to the [Releases](https://github.com/ersignee/TikTokr/releases) Tab and download the latest release .zip file
+## 🔥・Features
+
+✔ TikTok Followers, Likes, Views, Shares
+
+✔ Free
+
+---
+
+## 🚀・Setup TikTokr
+
+1. Go to the [Releases](https://github.com/ersignee/TikTokr/releases) Tab and download the latest .zip file
 2. Extract the file and open the script folder
 3. Press SHIFT+RIGHT-CLICK in the folder and open CMD(it should open it by default in the script folder)
 4. Install the required pip modules:
-
    <pre>pip install -r requirements.txt</pre>
 5. Run the script using:
-
    <pre>python tiktokr.py</pre>
-## Note
-Every time you run the script you have to complete a recaptcha.
-The script will open the default image viewer and show you a code that you will need to input in the console when asked.
 
-## Special thanks
-1. Thanks to https://zefoy.com/ for providing an amazing free service.
-2. Everyone who recommends TikTokr.
+## ⚡️・Upcoming
 
-## Release 2.0
 The next release will have the following new features:
 - Working followers tab
 - Working Likes tab
 
 Note that the followers and likes tabs in the menu already exist in the current release but aren't fully implemented yet.
+
+## 📄・License
+
+This project is licensed under the GPL General Public License v3.0 License - see the [LICENSE.md](./LICENSE) file for details
+```js
+  ・Educational purpose only and all your consequences caused by you actions is your responsibility
+  ・Selling this Free script is forbidden
+  ・If you make a copy of this/or fork it, it must be open-source and have credits linking to this repo
+```
+
+## 💭・ChangeLog
+
+```diff
+v1.0・27/07/2022
+First Release
+```
