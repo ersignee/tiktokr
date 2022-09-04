@@ -39,8 +39,8 @@ This project is licensed under the GPL General Public License v3.0 License - see
 
 ```diff
 v2.0・04/09/2022
-- Working Likes tab
-- Timer Auto-Detection (Internal)
+・Working Likes tab
+・Timer Auto-Detection (Internal)
 v1.0・27/07/2022
 First Release
 ```
