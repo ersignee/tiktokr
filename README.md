@@ -13,10 +13,11 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 ## 🚀・Setup TikTokr
 
 1. Go to the [Releases](https://github.com/ersignee/TikTokr/releases) Tab and download the latest .zip file
-2. Press SHIFT+RIGHT-CLICK in the folder and open CMD(it should open it by default in the script folder)
-3. Install the required pip modules:
+2. Extract the .zip archive
+3. Press SHIFT+RIGHT-CLICK in the extracted folder and open CMD(it should open it by default in the script folder)
+4. Install the required pip modules:
    <pre>pip install -r requirements.txt</pre>
-4. Run the script using:
+5. Run the script using:
    <pre>python tiktokr.py</pre>
 
 ## ⚡️・Upcoming
@@ -24,6 +25,7 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 The next release will have the following new features:
 - Working Followers tab(?*)
 - Proxy(?*)
+- Rework of the interactive menu(?*)
 
 ?* = Not sure at the moment
 
