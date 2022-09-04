@@ -22,7 +22,10 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 ## ⚡️・Upcoming
 
 The next release will have the following new features:
-- Working Followers tab
+- Working Followers tab(?*)
+- Proxy(?*)
+
+?* = Not sure at the moment
 
 Note that the followers and likes tabs in the menu already exist in the current release but aren't fully implemented yet.
 
@@ -41,6 +44,7 @@ This project is licensed under the GPL General Public License v3.0 License - see
 v2.0・04/09/2022
 ・Working Likes tab
 ・Timer Auto-Detection (Internal)
+・Chromedriver auto-installation
 v1.0・27/07/2022
   First Release
 ```
