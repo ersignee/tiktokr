@@ -42,5 +42,5 @@ v2.0・04/09/2022
 ・Working Likes tab
 ・Timer Auto-Detection (Internal)
 v1.0・27/07/2022
-First Release
+  First Release
 ```
