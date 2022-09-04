@@ -13,20 +13,16 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 ## 🚀・Setup TikTokr
 
 1. Go to the [Releases](https://github.com/ersignee/TikTokr/releases) Tab and download the latest .zip file
-2. Install Google Chrome, then go to "Options/Guide/Informations about Google Chrome" and look up for your Google Chrome Version
-3. Go to https://chromedriver.chromium.org/downloads and download the chromedriver of the same version as your browser
-4. Put the chromedriver.exe file in the same folder as the script
-5. Press SHIFT+RIGHT-CLICK in the folder and open CMD(it should open it by default in the script folder)
-6. Install the required pip modules:
+2. Press SHIFT+RIGHT-CLICK in the folder and open CMD(it should open it by default in the script folder)
+3. Install the required pip modules:
    <pre>pip install -r requirements.txt</pre>
-7. Run the script using:
+4. Run the script using:
    <pre>python tiktokr.py</pre>
 
 ## ⚡️・Upcoming
 
 The next release will have the following new features:
-- Working Likes tab
-- Timer Auto-Detection (Internal)
+- Working Followers tab
 
 Note that the followers and likes tabs in the menu already exist in the current release but aren't fully implemented yet.
 
@@ -42,6 +38,9 @@ This project is licensed under the GPL General Public License v3.0 License - see
 ## 💭・ChangeLog
 
 ```diff
+v2.0・04/09/2022
+- Working Likes tab
+- Timer Auto-Detection (Internal)
 v1.0・27/07/2022
 First Release
 ```
