@@ -2,5 +2,5 @@ selenium
 psutil
 pillow
 alive-progress
-chromedriver-autoinstaller
+webdriver_manager
 chromedriver_binary
