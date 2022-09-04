@@ -3,17 +3,16 @@ from os import system, name
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
 import chromedriver_binary
-import chromedriver_autoinstaller
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 import random
 from PIL import Image
 from alive_progress import alive_bar
 import psutil
 
-# Check if the current version of chromedriver exists
-# and if it doesn't, downloads it automatically
-chromedriver_autoinstaller.install()
+
 
 #Script
 OPTIONS = 5
@@ -34,9 +33,9 @@ def title():
     |\___   ___\\  \|\  \|\  \ |\___   ___\|\   __  \|\  \|\  \ |\   __  \    
     \|___ \  \_| \  \ \  \/  /_\|___ \  \_|\ \  \ \  \ \  \/  /_\ \  \_\  \   
          \ \  \ \ \  \ \   ___  \   \ \  \  \ \  \ \  \ \   ___  \ \   _  _\  
-          \ \  \ \ \  \ \  \\ \  \   \ \  \  \ \  \_\  \ \  \\ \  \ \  \\  \ 
+          \ \  \ \ \  \ \  \\ \  \   \ \  \  \ \  \_\  \ \  \\ \  \ \  \\  \  
            \ \__\ \ \__\ \__\\ \__\   \ \__\  \ \_______\ \__\\ \__\ \__\\ _\ 
-            \|__|  \|__|\|__| \|__|    \|__|   \|_______|\|__| \|__|\|__|\|__|    v1""")
+            \|__|  \|__|\|__| \|__|    \|__|   \|_______|\|__| \|__|\|__|\|__|    by @ersignee""")
     print("\n")
 
 def menu():
@@ -55,6 +54,7 @@ def exitmenu():
         print("Invalid selection.")
         exitmenu()
     else:
+        clear()
         exit()
 
 def captcha():
@@ -97,13 +97,13 @@ def opt1():
     views = int(input("Views(Min. 1000 - 3min wait for every 1000): "))
     views = views // 1000
     mintocomplete = (views*3) - 3
-    print("The process will take",mintocomplete,"minutes.")
+    print("The process will take approximately",mintocomplete,"minutes.")
     #PASTE URL
     urlinput = driver.find_element(by=By.XPATH,value='//*[@id="sid4"]/div/form/div/input')
     urlinput.click()
     urlinput.send_keys(videourl)
     time.sleep(1)
-
+    
     with alive_bar(views, enrich_print = False, force_tty=True, stats=False, elapsed=False) as bar:
         i = 0
         while i <= views:
@@ -114,8 +114,16 @@ def opt1():
             try:
                 driver.find_element(by=By.XPATH,value='//*[@id="c2VuZC9mb2xsb3dlcnNfdGlrdG9V"]/div[1]/div/form/button').click()
             except:
-                print("Error: Try again in 3 minutes.")
+                timeleft = driver.find_element(by=By.XPATH,value='//*[@id="c2VuZC9mb2xsb3dlcnNfdGlrdG9V"]/h4').text.split(" ")
+                print("Try again in", int(timeleft[2])+1," minutes.")
                 exit()
+            
+            time.sleep(5)
+            #get time left until next click
+            timeleft = driver.find_element(by=By.XPATH,value='//*[@id="c2VuZC9mb2xsb3dlcnNfdGlrdG9V"]/h4').text.split(" ")
+            timeleft = int(timeleft[2])+1
+            print("Time left to the next ~1000 views:", timeleft)
+
             i+=1
             if i<views:
                 bar()
@@ -123,7 +131,7 @@ def opt1():
                 bar()
                 print("You successfully recived",views*1000,"views.")
                 break
-            time.sleep(200)
+            time.sleep(timeleft*60)
             
     exitmenu()
 
@@ -136,6 +144,49 @@ def opt2():
     else:
         print("Option temporarily unavailable. Try again later.")
         exit()
+
+    #ask for video url
+    videourl=str(input("Video URL: "))
+    likes = int(input("Likes(Min. 25 - 16min wait for every 25): "))
+    likes = likes // 25
+    mintocomplete = (likes*16) - 16
+    print("The process will take approximately",mintocomplete,"minutes.")
+    #PASTE URL
+    urlinput = driver.find_element(by=By.XPATH,value='//*[@id="sid2"]/div/form/div/input')
+    urlinput.click()
+    urlinput.send_keys(videourl)
+    time.sleep(1)
+
+    with alive_bar(likes, enrich_print = False, force_tty=True, stats=False, elapsed=False) as bar:
+        i = 0
+        while i <= likes:
+            #CLICK SEARCH
+            urlinput.submit()
+            time.sleep(5)
+            #CLICK ON CONFIRM BUTTON
+            try:
+                driver.find_element(by=By.XPATH,value='//*[@id="c2VuZE9nb2xsb3dlcnNfdGlrdG9r"]/div[1]/div/form/button').click()
+            except:
+                timeleft = driver.find_element(by=By.XPATH,value='//*[@id="c2VuZE9nb2xsb3dlcnNfdGlrdG9r"]/h4').text.split(" ")
+                print("Try again in", int(timeleft[2])+1," minutes.")
+                exit()
+            
+            time.sleep(5)
+            #get time left until next click
+            timeleft = driver.find_element(by=By.XPATH,value='//*[@id="c2VuZE9nb2xsb3dlcnNfdGlrdG9r"]/h4').text.split(" ")
+            timeleft = int(timeleft[2])+1
+            print("Time left to the next ~25 likes:", timeleft)
+            
+            i+=1
+            if i<likes:
+                bar()
+            elif i==likes:
+                bar()
+                print("You successfully recived",likes*25,"likes.")
+                break
+            time.sleep(timeleft*60)
+            
+    exitmenu()
 
 def opt3():
     enabled = driver.find_element(by=By.XPATH,value='//button[@class="btn btn-primary rounded-0 menu"]').is_enabled()
@@ -179,8 +230,16 @@ def opt4():
             try:
                 driver.find_element(by=By.XPATH,value='//*[@id="c2VuZC9mb2xsb3dlcnNfdGlrdG9s"]/div[1]/div/form/button').click()
             except:
-                print("Error: Try again in 3 minutes.")
+                timeleft = driver.find_element(by=By.XPATH,value='//*[@id="c2VuZC9mb2xsb3dlcnNfdGlrdG9s"]/h4').text.split(" ")
+                print("Try again in", int(timeleft[2])+1," minutes.")
                 exit()
+            
+            time.sleep(5)
+            #get time left until next click
+            timeleft = driver.find_element(by=By.XPATH,value='//*[@id="c2VuZC9mb2xsb3dlcnNfdGlrdG9s"]/h4').text.split(" ")
+            timeleft = int(timeleft[2])+1
+            print("Time left to the next ~300 shares:", timeleft)
+            
             i+=1
             if i<shares:
                 bar()
@@ -188,7 +247,7 @@ def opt4():
                 bar()
                 print("You successfully recived",shares*300,"shares.")
                 break
-            time.sleep(200)
+            time.sleep(timeleft*60)
     exitmenu()
 
 def opt5():
@@ -214,11 +273,11 @@ print(r"""
 print("\n")
 #Chrome driver arguments
 options = webdriver.ChromeOptions()
-options.add_argument('--headless')
+#options.add_argument('--headless')
 options.add_argument('--incognito')
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 #Driver & Actions Init
-driver = webdriver.Chrome(options=options, executable_path='chromedriver')
+driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install())) #executable_path='chromedriver'
 action = ActionChains(driver)
 
 #Resolve Captcha (only first time you open the program)
@@ -246,6 +305,3 @@ elif selection == 5:
     opt5()
 elif selection == 0:
     exit()
-
-
-
