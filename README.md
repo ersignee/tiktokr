@@ -20,6 +20,9 @@ Tiktokr is a TikTok tool to get views, likes, follows and shares and increment t
 5. Run the script using:
    <pre>python tiktokr.py</pre>
 
+## ⏸️・Developement Stopped
+TikTokr is currently not in developement and will probably remain such since I no more need this tool. It might get new releases in the future but if you still see this paragraph that means it probably isn't currently being updated.
+
 ## ⚡️・Upcoming
 
 The next release will have the following new features:
