@@ -29,6 +29,7 @@ The next release will have the following new features:
 - Working Followers tab(?*)
 - Proxy(?*)
 - Rework of the interactive menu(?*)
+- Auto Captcha Solver(?*)
 
 ?* = Not sure at the moment
 
